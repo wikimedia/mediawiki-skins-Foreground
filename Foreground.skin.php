@@ -6,15 +6,8 @@
  * @file
  * @ingroup Skins
  */
-
-
-class Skinforeground extends SkinTemplate {
-	public $skinname = 'foreground', $stylename = 'foreground', $template = 'foregroundTemplate', $useHeadElement = true;
-
-	/**
-	 * @inheritDoc
-	 */
-	public function getDefaultModules() {
+class foregroundTemplate extends BaseTemplate {
+	public function execute() {
 		global $wgForegroundFeatures;
 		$wgForegroundFeaturesDefaults = array(
 			'showActionsForAnon' => true,
@@ -37,33 +30,13 @@ class Skinforeground extends SkinTemplate {
 		}
 		switch ($wgForegroundFeatures['IeEdgeCode']) {
 			case 1:
-				$this->getOutput()->addHeadItem('ie-meta', '<meta http-equiv="X-UA-Compatible" content="IE=edge" />');
+				$this->getSkin()->getOutput()->addHeadItem('ie-meta', '<meta http-equiv="X-UA-Compatible" content="IE=edge" />');
 				break;
 			case 2:
 				if (isset($_SERVER['HTTP_USER_AGENT']) && (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false))
 					header('X-UA-Compatible: IE=edge');
 				break;
 		}
-
-		$this->getOutput()->addModuleStyles('skins.foreground.styles');
-		return parent::getDefaultModules();
-	}
-
-	public function initPage( OutputPage $out ) {
-		global $wgLocalStylePath;
-		parent::initPage($out);
-
-		$viewport_meta = 'width=device-width, user-scalable=yes, initial-scale=1.0';
-		$out->addMeta('viewport', $viewport_meta);
-		$out->addModules('skins.foreground.js');
-	}
-
-}
-
-class foregroundTemplate extends BaseTemplate {
-	public function execute() {
-		global $wgForegroundFeatures;
-		$this->html('headelement');
 		switch ($wgForegroundFeatures['enableTabs']) {
 			case true:
 			    ob_start();
@@ -271,14 +244,9 @@ class foregroundTemplate extends BaseTemplate {
 			</footer>
 
 		</div>
-
-		<?php $this->printTrail(); ?>
 			<?php if ($this->data['isarticle'] && $wgForegroundFeatures['addThisPUBID'] !== '') { ?>
 				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?php echo $wgForegroundFeatures['addThisPUBID']; ?>" async="async">></script>
 			<?php } ?>
-		</body>
-		</html>
-
 <?php
 	}
 }
