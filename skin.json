@@ -1,13 +1,12 @@
 {
     "name": "Foreground",
-    "version": "2.4.1-dev",
     "author": [
         "Garrick Van Buren",
         "Jamie Thingelstad",
         "Tom Hutchison",
         "..."
     ],
-    "url": "https://github.com/thingles/foreground",
+    "url": "https://www.mediawiki.org/wiki/Skin:Foreground",
     "descriptionmsg": "foreground-desc",
     "license-name": "BSD-2-Clause",
     "type": "skin",
