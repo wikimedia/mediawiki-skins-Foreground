@@ -56,17 +56,23 @@ class foregroundTemplate extends BaseTemplate {
 		// Set default variables for footer and switch them if 'showFooterIcons' => true
 		$footerLeftClass = 'small-12 large-centered columns text-center';
 		$footerRightClass = 'large-12 small-12 columns';
-		$poweredbyType = "nocopyright";
+
+		$footerIconBlocks = $this->get( 'footericons' );
 		$poweredbyMakeType = 'withoutImage';
-		switch ($wgForegroundFeatures['showFooterIcons']) {
-			case true:
-				$footerLeftClass = 'large-8 small-12 columns';
-				$footerRightClass = 'large-4 small-12 columns';
-				$poweredbyType = "icononly";
-				$poweredbyMakeType = 'withImage';
-				break;
-			default:
-				break;
+		if ( $wgForegroundFeatures['showFooterIcons'] ) {
+			$footerLeftClass = 'large-8 small-12 columns';
+			$footerRightClass = 'large-4 small-12 columns';
+			$poweredbyMakeType = 'withImage';
+			// Unset footer icons without images.
+			foreach ( $footerIconBlocks as &$footerIconsBlock ) {
+				foreach ( $footerIconsBlock as $footerIconKey => $footerIcon ) {
+					if ( !isset( $footerIcon['src'] ) ) {
+						unset( $footerIconsBlock[$footerIconKey] );
+					}
+				}
+			}
+		} else {
+			unset( $footerIconBlocks['copyright'] );
 		}
 ?>
 <!-- START FOREGROUNDTEMPLATE -->
@@ -118,7 +124,7 @@ class foregroundTemplate extends BaseTemplate {
 
 				<li class="has-dropdown active"><a href="#"><i class="fa fa-cogs"></i></a>
 					<ul id="toolbox-dropdown" class="dropdown">
-						<?php foreach ( $this->getToolbox() as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
+						<?php foreach ( $this->data['sidebar']['TOOLBOX'] as $key => $item ) { echo $this->makeListItem($key, $item); } ?>
 						<?php if ($wgForegroundFeatures['showRecentChangesUnderTools']): ?><li id="n-recentchanges"><?php echo Linker::specialLink('Recentchanges') ?></li><?php endif; ?>
 						<?php if ($wgForegroundFeatures['showHelpUnderTools']): ?><li id="n-help" <?php echo Linker::tooltip('help') ?>><a href="<?php echo Skin::makeInternalOrExternalUrl( wfMessage( 'helppage' )->inContentLanguage()->text() )?>"><?php echo wfMessage( 'help' )->text() ?></a></li><?php endif; ?>
 					</ul>
@@ -224,7 +230,7 @@ class foregroundTemplate extends BaseTemplate {
 					</div>
 					<div id="footer-right-icons" class="<?php echo $footerRightClass;?>">
 					<ul id="poweredby">
-						<?php foreach ( $this->getFooterIcons( $poweredbyType ) as $blockName => $footerIcons ) { ?>
+						<?php foreach ( $footerIconBlocks as $blockName => $footerIcons ) { ?>
 							<li class="<?php echo $blockName ?>"><?php foreach ( $footerIcons as $icon ) { ?>
 								<?php echo $this->getSkin()->makeFooterIcon( $icon, $poweredbyMakeType ); ?>
 								<?php } ?>
