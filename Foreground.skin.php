@@ -28,15 +28,7 @@ class foregroundTemplate extends BaseTemplate {
 				$wgForegroundFeatures[$fgOption] = $fgOptionValue;
 			}
 		}
-		switch ($wgForegroundFeatures['IeEdgeCode']) {
-			case 1:
-				$this->getSkin()->getOutput()->addHeadItem('ie-meta', '<meta http-equiv="X-UA-Compatible" content="IE=edge" />');
-				break;
-			case 2:
-				if (isset($_SERVER['HTTP_USER_AGENT']) && (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false))
-					header('X-UA-Compatible: IE=edge');
-				break;
-		}
+		$this->getSkin()->getOutput()->addHeadItem('ie-meta', '<meta http-equiv="X-UA-Compatible" content="IE=edge" />');
 		switch ($wgForegroundFeatures['enableTabs']) {
 			case true:
 			    ob_start();

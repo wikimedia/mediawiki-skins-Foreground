@@ -12,10 +12,26 @@
     "license-name": "BSD-2-Clause",
     "type": "skin",
     "ValidSkinNames": {
-        "foreground": "Foreground"
+        "foreground": {
+            "class": "SkinTemplate",
+            "args": [
+                {
+                    "name": "foreground",
+                    "template": "foregroundTemplate",
+                    "bodyOnly": true,
+                    "responsive": true,
+                    "scripts": [
+                        "skins.foreground.js"
+                    ],
+                    "styles": [
+                        "skins.foreground.styles"
+                    ]
+                }
+            ]
+        }
     },
     "requires": {
-        "MediaWiki": ">= 1.35.0"
+        "MediaWiki": ">= 1.39.0"
     },
     "MessagesDirs": {
         "SkinForeground": [
@@ -23,7 +39,6 @@
         ]
     },
     "AutoloadClasses": {
-        "SkinForeground": "Foreground.skin.php",
         "foregroundTemplate": "Foreground.skin.php"
     },
     "ResourceModules": {
