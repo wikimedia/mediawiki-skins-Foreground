@@ -1,7 +1,8 @@
-## Version 2.4.1-dev
+For MediaWiki (MW) 1.37 and later no dedicated tags will be created, i.e. for 1.37.x, 1.38.x and 1.39.x use branch
+`REL1_39`. For MW 1.40.x use `REL1_40`, for MW 1.41.x use `REL1_41`, etc.
 
 ## Version 2.4.0
-* [compatibility, b/c break] Requires MW >=1.35 in skin.json minor version bump
+* [compatibility, b/c break] Requires MW >=1.35 in skin.json minor version bump, compatible with MW 1.36.x and MW 1.36.x
 * [deprecated] Avoid deprecated methods PR #373 - solves issue #371
 * [bug] Patching "footer-left" id duplicated PR #372 - Avoid setupSkinUserCss and escapeId, both of which were deprecated before MediaWiki 1.34.
 * [code] Add minus-x and update php-parallel-lint #374 - Remove the executable bit from a few files.
@@ -20,7 +21,6 @@
 
 ## Version 2.2.3
 * [bug, compatibility] PR #352 Replace usge of wfSuppressWarnings and wfRestoreWarnings MW 1.34 compatibility
-
 
 ## Version 2.2.2
 * [bug] PR #350 Coding fix for missing </li> close
