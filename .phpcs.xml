@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ruleset>
+	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
+		<exclude name="MediaWiki.Files.ClassMatchesFilename.NotMatch" />
+		<exclude name="Squiz.Classes.ValidClassName.NotCamelCaps" />
+		<exclude name="MediaWiki.VariableAnalysis.MisleadingGlobalNames.Misleading$wgForegroundFeaturesDefaults" />
+		<exclude name="Generic.Files.LineLength.TooLong" />
+		<exclude name="MediaWiki.AlternativeSyntax.AlternativeSyntax.AlternativeSyntax" />
+		<exclude name="MediaWiki.Usage.ReferenceThis.Found" />
+	</rule>
+	<file>.</file>
+	<exclude-pattern>./assets/*</exclude-pattern>
+</ruleset>
