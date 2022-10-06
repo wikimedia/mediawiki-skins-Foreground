@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"skinname-foreground": "Ospredje",
+	"foreground-desc": "Zagotavlja preobleko, ki se osredotoča na postavitev vaše vsebine v ospredje",
+	"foreground-browsermsg": "v tej različici Internet Explorerja morda ne bo videti po pričakovanjih. Priporočamo, da nadgradite na novejšo različico Internet Explorerja ali preklopite na brskalnik, kot sta Firefox ali Chrome.",
+	"foreground-menutitle": "Meni",
+	"foreground-menunavback": "Nazaj"
+}
