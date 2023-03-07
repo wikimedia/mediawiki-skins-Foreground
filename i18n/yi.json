@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Pacha Tchernof",
 			"פוילישער"
 		]
 	},
-	"foreground-menutitle": "מעניו"
+	"foreground-menutitle": "מעניו",
+	"foreground-menunavback": "צוריק"
 }
