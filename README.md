@@ -11,11 +11,11 @@ extract them from:
 
     https://github.com/wikimedia/mediawiki-skins-Foreground/archive/refs/heads/master.zip
 
-You should extract that into a folder named `foreground` in your `skins` directory.
+You should extract that into a folder named `Foreground` in your `skins` directory.
 
 Alternatively, you can use git to clone the repository, which makes it very easy to update the code, using:
 
-    git clone https://github.com/wikimedia/mediawiki-skins-Foreground.git foreground
+    git clone https://github.com/wikimedia/mediawiki-skins-Foreground.git Foreground
 
 After that, you can issue `git pull` to update the code at anytime.
 
@@ -23,7 +23,7 @@ After that, you can issue `git pull` to update the code at anytime.
 
 Once the skin is in place add one the following lines to your "LocalSettings.php" file.
 
-	wfLoadSkin( 'foreground' );
+	wfLoadSkin( 'Foreground' );
 
 This will activate Foreground in your installation. At this point you can select it as a user skin in your user preferences.
 
