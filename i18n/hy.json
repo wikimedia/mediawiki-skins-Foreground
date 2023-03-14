@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Սերգեյ Սաֆարյան"
+			"Սերգեյ Սաֆարյան",
+			"Kareyac"
 		]
 	},
-	"foreground-menutitle": "Ընտրացանկ"
+	"foreground-menutitle": "Ընտրացանկ",
+	"foreground-menunavback": "Հետ"
 }
