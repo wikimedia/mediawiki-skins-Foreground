@@ -87,7 +87,7 @@
     },
     "ResourceFileModulePaths": {
         "localBasePath": "",
-        "remoteSkinPath": "foreground"
+        "remoteSkinPath": "Foreground"
     },
     "config": {},
     "manifest_version": 1
