@@ -9,4 +9,5 @@ Thumbs.db
 ._*
 vendor/
 composer.lock
-
+.eslintcache
+node_modules/

@@ -1,5 +1,16 @@
 /* Control what will print */
 
+/* stylelint-disable block-opening-brace-space-before */
+/* stylelint-disable color-hex-length */
+/* stylelint-disable comment-whitespace-inside */
+/* stylelint-disable declaration-no-important */
+/* stylelint-disable indentation */
+/* stylelint-disable max-empty-lines */
+/* stylelint-disable rule-empty-line-before */
+/* stylelint-disable selector-list-comma-newline-after */
+/* stylelint-disable selector-max-id */
+/* stylelint-disable declaration-property-value-disallowed-list */
+
 @media print {
 	/* stop double border at bottom with print */
 	footer.row {

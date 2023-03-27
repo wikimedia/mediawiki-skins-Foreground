@@ -1,3 +1,37 @@
+/* stylelint-disable block-opening-brace-newline-after */
+/* stylelint-disable declaration-no-important */
+/* stylelint-disable function-parentheses-space-inside */
+/* stylelint-disable indentation */
+/* stylelint-disable media-feature-parentheses-space-inside */
+/* stylelint-disable no-descending-specificity */
+/* stylelint-disable number-leading-zero */
+/* stylelint-disable rule-empty-line-before */
+/* stylelint-disable selector-descendant-combinator-no-non-space */
+/* stylelint-disable selector-list-comma-newline-after */
+/* stylelint-disable unit-disallowed-list */
+/* stylelint-disable color-hex-case */
+/* stylelint-disable color-named */
+/* stylelint-disable comment-whitespace-inside */
+/* stylelint-disable declaration-property-value-disallowed-list */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable selector-attribute-brackets-space-inside */
+/* stylelint-disable selector-combinator-space-after */
+/* stylelint-disable selector-combinator-space-before */
+/* stylelint-disable selector-max-id */
+/* stylelint-disable selector-pseudo-class-parentheses-space-inside */
+/* stylelint-disable string-quotes */
+/* stylelint-disable at-rule-empty-line-before */
+/* stylelint-disable block-closing-brace-space-after */
+/* stylelint-disable block-opening-brace-newline-before */
+/* stylelint-disable color-hex-length */
+/* stylelint-disable declaration-block-semicolon-newline-after */
+/* stylelint-disable declaration-block-single-line-max-declarations */
+/* stylelint-disable length-zero-no-unit */
+/* stylelint-disable max-empty-lines */
+/* stylelint-disable number-no-trailing-zeros */
+/* stylelint-disable selector-attribute-quotes */
+/* stylelint-disable selector-type-no-unknown */
+
 body {
 	line-height: 1.6em;
 }
@@ -45,11 +79,11 @@ table { background: transparent; margin-bottom: 1.25em; border: 0; }
 table thead, table tfoot { background: 0; font-weight: normal; }
 table thead tr th, table thead tr td, table tfoot tr th, table tfoot tr td { padding: 0; font-size: 100%; color: inherit; text-align: inherit; }
 table tr th, table tr td { padding: 0; font-size: 100%; color: inherit; }
-table tr.even, table tr.alt, table tr:nth-of-type(even) { background: transparent; } 
+table tr.even, table tr.alt, table tr:nth-of-type(even) { background: transparent; }
 table thead tr th, table tfoot tr th, table tbody tr td, table tr td, table tfoot tr td { display: table-cell; line-height: inherit; text-align: inherit; }
 
 /* wikitable classes reset */
-table.wikitable { 
+table.wikitable {
   margin: 1em 0;
 }
 table.wikitable > tr > th,
@@ -217,35 +251,35 @@ dl {
 	margin: 0.5em 0 0 2em;
 	padding: 0;
 }
-	
+
 .mw-content-rtl ul,
 .mw-content-ltr .mw-content-rtl ul {
 	/* @noflip */
 	margin: 0.5em 2em 0 0;
 	padding: 0;
 }
-	
+
 .mw-content-ltr ol,
 .mw-content-rtl .mw-content-ltr ol {
 	/* @noflip */
 	margin: 0.5em 0 0 2em;
 	padding: 0;
 }
-	
+
 .mw-content-rtl ol,
 .mw-content-ltr .mw-content-rtl ol {
 	/* @noflip */
 	margin: 0.5em 2em 0 0;
 	padding: 0;
 }
-	
+
 /* @noflip */
 .mw-content-ltr dd,
 .mw-content-rtl .mw-content-ltr dd {
 	margin-left: 1.6em;
 	margin-right: 0;
 }
-	
+
 /* @noflip */
 .mw-content-rtl dd,
 .mw-content-ltr .mw-content-rtl dd {
@@ -667,12 +701,12 @@ h1#firstHeading {
 }
 }
 
-/* Don't like the black top bar? Copy this into your Foreground.css and change the colors 
+/* Don't like the black top bar? Copy this into your Foreground.css and change the colors
 
-.top-bar, 
-.top-bar-section ul, 
-.top-bar-section ul li.active > a, 
-.top-bar-section li a:not(.button), 
+.top-bar,
+.top-bar-section ul,
+.top-bar-section ul li.active > a,
+.top-bar-section li a:not(.button),
 .top-bar-section .has-form {
     background: #333333;
 }
@@ -1325,7 +1359,7 @@ div.mw-htmlform-field-HTMLCheckField div.mw-label {
 #echo-notifications-messages,
 #echo-notifications {
 	display: inline-block;
-} 
+}
 
 #pt-notifications-notice .mw-echo-notifications-badge,
 #pt-notifications-alert .mw-echo-notifications-badge,
@@ -1573,13 +1607,13 @@ td.htmlform-tip {
 }
 
 /* Float right and left styles - Make all MW images responsive for mobile when floated  */
- 
+
 .floatright, .tright,
 table.floatright {
     margin: 0 0 .5em .5em;
     border: 0;
 }
- 
+
 .floatleft,.tleft
 table.floatleft {
     margin: 0 .5em .5em 0;
@@ -1597,7 +1631,7 @@ table.floatleft {
 
 /* Kill the float for smaller screens and make them align center. */
 
-@media only screen and (max-width: 640px) { 
+@media only screen and (max-width: 640px) {
     .floatright,
     table.floatright,
     .floatleft,
