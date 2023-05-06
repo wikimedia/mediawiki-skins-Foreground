@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * Skin file for Foreground
  *
@@ -183,7 +185,7 @@ class foregroundTemplate extends BaseTemplate {
 						<ul id="actions" class="f-dropdown" data-dropdown-content>
 							<?php foreach ( $this->data['content_actions'] as $key => $item ) { echo preg_replace( [ '/\sprimary="1"/','/\scontext="[a-z]+"/','/\srel="archives"/' ], '', $this->makeListItem( $key, $item ) );
 							} ?>
-							<?php Hooks::run( 'SkinTemplateToolboxEnd', [ &$this, true ] );  ?>
+							<?php MediaWikiServices::getInstance()->getHookContainer()->run( 'SkinTemplateToolboxEnd', [ &$this, true ] );  ?>
 						</ul>
 						<!--RTL -->
 					<?php endif;
