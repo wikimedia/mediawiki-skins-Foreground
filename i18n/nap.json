@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"C.R."
+			"C.R.",
+			"Ruthven"
 		]
 	},
-	"skinname-foreground": "In primmo piano",
+	"skinname-foreground": "Annanze",
 	"foreground-desc": "V'arricettasse nu skin ca v'aiutasse azzeccanno 'e cuntenute vuoste annanz' 'o primmo piano",
 	"foreground-menutitle": "Menu",
 	"foreground-menunavback": "Arreto"
