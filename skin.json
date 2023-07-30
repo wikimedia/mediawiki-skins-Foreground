@@ -16,7 +16,7 @@
 			"args": [
 				{
 					"name": "foreground",
-					"template": "foregroundTemplate",
+					"template": "MediaWiki\\Skins\\Foreground\\ForegroundTemplate",
 					"bodyOnly": true,
 					"responsive": true,
 					"scripts": [
@@ -37,8 +37,8 @@
 			"i18n"
 		]
 	},
-	"AutoloadClasses": {
-		"foregroundTemplate": "Foreground.skin.php"
+	"AutoloadNamespaces": {
+		"MediaWiki\\Skins\\Foreground\\": "includes/"
 	},
 	"ResourceModules": {
 		"skins.foreground.styles": {
