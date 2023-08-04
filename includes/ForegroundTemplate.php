@@ -1,6 +1,12 @@
 <?php
 
+namespace MediaWiki\Skins\Foreground;
+
+use BaseTemplate;
+use MediaWiki\Linker\Linker;
 use MediaWiki\MediaWikiServices;
+use Sanitizer;
+use Skin;
 
 /**
  * Skin file for Foreground
@@ -8,7 +14,7 @@ use MediaWiki\MediaWikiServices;
  * @file
  * @ingroup Skins
  */
-class foregroundTemplate extends BaseTemplate {
+class ForegroundTemplate extends BaseTemplate {
 	public function execute() {
 		global $wgForegroundFeatures;
 		$wgForegroundFeaturesDefaults = [
