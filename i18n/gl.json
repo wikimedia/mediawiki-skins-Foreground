@@ -2,10 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Athena in Wonderland",
-			"Banjo"
+			"Banjo",
+			"Toliño"
 		]
 	},
 	"skinname-foreground": "Primeiro plano",
+	"foreground-desc": "Ofrece un aspecto que se centra en poñer o teu contido en primeiro plano",
+	"foreground-browsermsg": "pode non amosarse como se espera nesta versión de Internet Explorer. Recomendamos que actualices a unha versión máis recente de Internet Explorer ou cambies a un navegador como Firefox ou Chrome.",
 	"foreground-menutitle": "Menú",
 	"foreground-menunavback": "Volver"
 }
