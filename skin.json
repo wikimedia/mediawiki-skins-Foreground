@@ -80,7 +80,7 @@
 				"assets/scripts/foreground.js"
 			],
 			"dependencies": [
-				"jquery.cookie",
+				"mediawiki.cookie",
 				"skins.foreground.modernizr"
 			]
 		}
