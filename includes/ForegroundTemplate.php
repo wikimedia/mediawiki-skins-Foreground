@@ -106,7 +106,7 @@ class ForegroundTemplate extends BaseTemplate {
 			<ul id="top-bar-left" class="left">
 				<li class="divider show-for-small"></li>
 				<?php foreach ( $this->getSidebar() as $boxName => $box ) { if ( ( $box['header'] != wfMessage( 'toolbox' )->text() ) ) { ?>
-					<li class="has-dropdown active"  id='<?php echo Sanitizer::escapeIdForAttribute( $box['id'] ) ?>'<?php echo Linker::tooltip( $box['id'] ) ?>>
+					<li class="has-dropdown active" id='<?php echo htmlspecialchars( Sanitizer::escapeIdForAttribute( $box['id'] ), ENT_QUOTES ) ?>'<?php echo Linker::tooltip( $box['id'] ) ?>>
 						<a href="#"><?php echo htmlspecialchars( $box['header'] ); ?></a>
 						<?php if ( is_array( $box['content'] ) ) { ?>
 							<ul class="dropdown">
