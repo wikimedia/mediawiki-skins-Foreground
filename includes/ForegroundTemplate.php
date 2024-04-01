@@ -3,7 +3,7 @@
 namespace MediaWiki\Skins\Foreground;
 
 use BaseTemplate;
-use MediaWiki\Linker\Linker;
+use Linker;
 use MediaWiki\MediaWikiServices;
 use Sanitizer;
 use Skin;
