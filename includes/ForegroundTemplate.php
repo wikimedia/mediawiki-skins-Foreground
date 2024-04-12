@@ -17,7 +17,7 @@ use Skin;
 class ForegroundTemplate extends BaseTemplate {
 	public function execute() {
 		global $wgForegroundFeatures;
-		$wgForegroundFeaturesDefaults = [
+		$defaults = [
 			'showActionsForAnon' => true,
 			'NavWrapperType' => 'divonly',
 			'showHelpUnderTools' => true,
@@ -31,12 +31,13 @@ class ForegroundTemplate extends BaseTemplate {
 			'useAddThisShare' => '',
 			'useAddThisFollow' => ''
 		];
-		foreach ( $wgForegroundFeaturesDefaults as $fgOption => $fgOptionValue ) {
+		foreach ( $defaults as $fgOption => $fgOptionValue ) {
 			if ( !isset( $wgForegroundFeatures[$fgOption] ) ) {
 				$wgForegroundFeatures[$fgOption] = $fgOptionValue;
 			}
 		}
-		$this->getSkin()->getOutput()->addHeadItem( 'ie-meta', '<meta http-equiv="X-UA-Compatible" content="IE=edge" />' );
+		$this->getSkin()->getOutput()->addHeadItem( 'ie-meta',
+			'<meta http-equiv="X-UA-Compatible" content="IE=edge" />' );
 		switch ( $wgForegroundFeatures['enableTabs'] ) {
 			case true:
 				ob_start();
@@ -82,6 +83,9 @@ class ForegroundTemplate extends BaseTemplate {
 		} else {
 			unset( $footerIconBlocks['copyright'] );
 		}
+
+		// phpcs:disable Generic.Files.LineLength
+		// phpcs:disable MediaWiki.AlternativeSyntax.AlternativeSyntax
 ?>
 <!-- START FOREGROUNDTEMPLATE -->
 		<nav class="top-bar" data-topbar role="navigation" data-options="back_text: <?php echo wfMessage( 'foreground-menunavback' )->text(); ?>">
@@ -191,7 +195,7 @@ class ForegroundTemplate extends BaseTemplate {
 						<ul id="actions" class="f-dropdown" data-dropdown-content>
 							<?php foreach ( $this->data['content_actions'] as $key => $item ) { echo preg_replace( [ '/\sprimary="1"/','/\scontext="[a-z]+"/','/\srel="archives"/' ], '', $this->makeListItem( $key, $item ) );
 							} ?>
-							<?php MediaWikiServices::getInstance()->getHookContainer()->run( 'SkinTemplateToolboxEnd', [ &$this, true ] );  ?>
+							<?php MediaWikiServices::getInstance()->getHookContainer()->run( 'SkinTemplateToolboxEnd', [ $this, true ] );  ?>
 						</ul>
 						<!--RTL -->
 					<?php endif;
