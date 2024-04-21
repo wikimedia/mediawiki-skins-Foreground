@@ -109,17 +109,19 @@ class ForegroundTemplate extends BaseTemplate {
 
 			<ul id="top-bar-left" class="left">
 				<li class="divider show-for-small"></li>
-				<?php foreach ( $this->getSidebar() as $boxName => $box ) { if ( ( $box['header'] != wfMessage( 'toolbox' )->text() ) ) { ?>
+				<?php foreach ( $this->getSidebar() as $boxName => $box ) {
+					if ( ( $box['header'] != wfMessage( 'toolbox' )->text() ) ) { ?>
 					<li class="has-dropdown active" id='<?php echo htmlspecialchars( Sanitizer::escapeIdForAttribute( $box['id'] ), ENT_QUOTES ) ?>'<?php echo Linker::tooltip( $box['id'] ) ?>>
 						<a href="#"><?php echo htmlspecialchars( $box['header'] ); ?></a>
-						<?php if ( is_array( $box['content'] ) ) { ?>
+											<?php if ( is_array( $box['content'] ) ) { ?>
 							<ul class="dropdown">
-								<?php foreach ( $box['content'] as $key => $item ) { echo $this->makeListItem( $key, $item );
+								<?php foreach ( $box['content'] as $key => $item ) {
+									echo $this->makeListItem( $key, $item );
 								} ?>
 							</ul>
-						<?php } ?>
+											<?php } ?>
 					</li>
-				<?php }
+					<?php }
 				} ?>
 			</ul>
 
@@ -138,18 +140,22 @@ class ForegroundTemplate extends BaseTemplate {
 
 				<li class="has-dropdown active"><a href="#"><i class="fa fa-cogs"></i></a>
 					<ul id="toolbox-dropdown" class="dropdown">
-						<?php foreach ( $this->data['sidebar']['TOOLBOX'] as $key => $item ) { echo $this->makeListItem( $key, $item );
+						<?php foreach ( $this->data['sidebar']['TOOLBOX'] as $key => $item ) {
+							echo $this->makeListItem( $key, $item );
 						} ?>
-						<?php if ( $wgForegroundFeatures['showRecentChangesUnderTools'] ): ?><li id="n-recentchanges"><?php echo Linker::specialLink( 'Recentchanges' ) ?></li><?php
-						endif; ?>
-						<?php if ( $wgForegroundFeatures['showHelpUnderTools'] ): ?><li id="n-help" <?php echo Linker::tooltip( 'help' ) ?>><a href="<?php echo Skin::makeInternalOrExternalUrl( wfMessage( 'helppage' )->inContentLanguage()->text() )?>"><?php echo wfMessage( 'help' )->text() ?></a></li><?php
-						endif; ?>
+						<?php if ( $wgForegroundFeatures['showRecentChangesUnderTools'] ) {
+?><li id="n-recentchanges"><?php echo Linker::specialLink( 'Recentchanges' ) ?></li><?php
+						} ?>
+						<?php if ( $wgForegroundFeatures['showHelpUnderTools'] ) {
+?><li id="n-help" <?php echo Linker::tooltip( 'help' ) ?>><a href="<?php echo Skin::makeInternalOrExternalUrl( wfMessage( 'helppage' )->inContentLanguage()->text() )?>"><?php echo wfMessage( 'help' )->text() ?></a></li><?php
+						} ?>
 					</ul>
 				</li>
 
 				<li id="personal-tools-dropdown" class="has-dropdown active"><a href="#"><i class="fa fa-user"></i></a>
 					<ul class="dropdown">
-						<?php foreach ( $this->getPersonalTools() as $key => $item ) { echo $this->makeListItem( $key, $item );
+						<?php foreach ( $this->getPersonalTools() as $key => $item ) {
+							echo $this->makeListItem( $key, $item );
 						} ?>
 					</ul>
 				</li>
@@ -158,7 +164,8 @@ class ForegroundTemplate extends BaseTemplate {
 		</section>
 		</nav>
 
-		<?php if ( $wgForegroundFeatures['NavWrapperType'] != '0' ) { echo "</div>";
+		<?php if ( $wgForegroundFeatures['NavWrapperType'] != '0' ) {
+			echo "</div>";
 		} ?>
 
 		<div id="page-content">
@@ -167,20 +174,22 @@ class ForegroundTemplate extends BaseTemplate {
 					<!-- Output page indicators -->
 					<?php echo $this->getIndicators(); ?>
 					<!-- If user is logged in output echo location -->
-					<?php if ( $this->get( 'loggedin' ) ): ?>
+					<?php if ( $this->get( 'loggedin' ) ) { ?>
 					<div id="echo-notifications">
 					<div id="echo-notifications-alerts"></div>
 					<div id="echo-notifications-messages"></div>
 					<div id="echo-notifications-notice"></div>
 					</div>
-					<?php endif; ?>
+					<?php } ?>
 				<!--[if lt IE 9]>
 				<div id="siteNotice" class="sitenotice panel radius"><?php echo $this->text( 'sitename' ) . ' ' . wfMessage( 'foreground-browsermsg' )->text(); ?></div>
 				<![endif]-->
 
-				<?php if ( $this->data['sitenotice'] ) { ?><div id="siteNotice" class="sitenotice"><?php $this->html( 'sitenotice' ); ?></div><?php
+				<?php if ( $this->data['sitenotice'] ) {
+?><div id="siteNotice" class="sitenotice"><?php $this->html( 'sitenotice' ); ?></div><?php
 				} ?>
-				<?php if ( $this->data['newtalk'] ) { ?><div id="usermessage" class="newtalk panel radius"><?php $this->html( 'newtalk' ); ?></div><?php
+				<?php if ( $this->data['newtalk'] ) {
+?><div id="usermessage" class="newtalk panel radius"><?php $this->html( 'newtalk' ); ?></div><?php
 				} ?>
 				</div>
 		</div>
@@ -189,16 +198,17 @@ class ForegroundTemplate extends BaseTemplate {
 
 		<div class="row">
 				<div id="p-cactions" class="large-12 columns">
-					<?php if ( $this->get( 'loggedin' ) || $wgForegroundFeatures['showActionsForAnon'] ): ?>
+					<?php if ( $this->get( 'loggedin' ) || $wgForegroundFeatures['showActionsForAnon'] ) { ?>
 						<a id="actions-button" href="#" data-dropdown="actions" data-options="align:left; is_hover: true; hover_timeout:700" class="button small secondary radius"><i class="fa fa-cog"><span class="show-for-medium-up">&nbsp;<?php echo wfMessage( 'actions' )->text() ?></span></i></a>
 						<!--RTL -->
 						<ul id="actions" class="f-dropdown" data-dropdown-content>
-							<?php foreach ( $this->data['content_actions'] as $key => $item ) { echo preg_replace( [ '/\sprimary="1"/','/\scontext="[a-z]+"/','/\srel="archives"/' ], '', $this->makeListItem( $key, $item ) );
+							<?php foreach ( $this->data['content_actions'] as $key => $item ) {
+								echo preg_replace( [ '/\sprimary="1"/', '/\scontext="[a-z]+"/', '/\srel="archives"/' ], '', $this->makeListItem( $key, $item ) );
 							} ?>
 							<?php MediaWikiServices::getInstance()->getHookContainer()->run( 'SkinTemplateToolboxEnd', [ $this, true ] );  ?>
 						</ul>
 						<!--RTL -->
-					<?php endif;
+					<?php }
 					$namespace = str_replace( '_', ' ', $this->getSkin()->getTitle()->getNsText() );
 					$displaytitle = $this->data['title'];
 					if ( !empty( $namespace ) ) {
@@ -214,20 +224,21 @@ class ForegroundTemplate extends BaseTemplate {
 						<div class="<?php echo $wgForegroundFeatures['useAddThisShare']; ?> hide-for-print"></div>
 						<!-- Go to www.addthis.com/dashboard to customize your tools -->
 						<?php } ?>
-					<?php if ( $this->data['isarticle'] ) { ?><h3 id="tagline"><?php $this->msg( 'tagline' ) ?></h3><?php
+					<?php if ( $this->data['isarticle'] ) {
+?><h3 id="tagline"><?php $this->msg( 'tagline' ) ?></h3><?php
 					} ?>
 					<h5 id="siteSub" class="subtitle"><?php $this->html( 'subtitle' ) ?></h5>
 					<div id="contentSub" class="clear_both"></div>
 					<div id="bodyContent" class="mw-bodytext">
 						<?php
-							switch ( $wgForegroundFeatures['enableTabs'] ) {
-								case true:
-									echo $body;
-									break;
-								default:
+						switch ( $wgForegroundFeatures['enableTabs'] ) {
+							case true:
+								echo $body;
+								break;
+							default:
 								$this->html( 'bodytext' );
-									break;
-							}
+								break;
+						}
 						?>
 						<div class="clear_both"></div>
 					</div>
