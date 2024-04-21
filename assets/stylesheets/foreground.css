@@ -1,55 +1,37 @@
-/* stylelint-disable block-opening-brace-newline-after */
 /* stylelint-disable declaration-no-important */
-/* stylelint-disable function-parentheses-space-inside */
-/* stylelint-disable indentation */
-/* stylelint-disable media-feature-parentheses-space-inside */
 /* stylelint-disable no-descending-specificity */
-/* stylelint-disable number-leading-zero */
-/* stylelint-disable rule-empty-line-before */
-/* stylelint-disable selector-descendant-combinator-no-non-space */
-/* stylelint-disable selector-list-comma-newline-after */
 /* stylelint-disable unit-disallowed-list */
-/* stylelint-disable color-hex-case */
 /* stylelint-disable color-named */
-/* stylelint-disable comment-whitespace-inside */
 /* stylelint-disable declaration-property-value-disallowed-list */
 /* stylelint-disable no-duplicate-selectors */
-/* stylelint-disable selector-attribute-brackets-space-inside */
-/* stylelint-disable selector-combinator-space-after */
-/* stylelint-disable selector-combinator-space-before */
 /* stylelint-disable selector-max-id */
-/* stylelint-disable selector-pseudo-class-parentheses-space-inside */
-/* stylelint-disable string-quotes */
-/* stylelint-disable at-rule-empty-line-before */
-/* stylelint-disable block-closing-brace-space-after */
-/* stylelint-disable block-opening-brace-newline-before */
-/* stylelint-disable color-hex-length */
-/* stylelint-disable declaration-block-semicolon-newline-after */
-/* stylelint-disable declaration-block-single-line-max-declarations */
-/* stylelint-disable length-zero-no-unit */
-/* stylelint-disable max-empty-lines */
-/* stylelint-disable number-no-trailing-zeros */
-/* stylelint-disable selector-attribute-quotes */
 /* stylelint-disable selector-type-no-unknown */
 
 body {
 	line-height: 1.6em;
 }
+
 p {
 	margin-bottom: 0.25em;
 }
+
 #page-content {
 	margin: 2rem 0 0;
 }
+
 .row {
 	max-width: 75em;
 }
-a.label:hover, a.label:focus {
+
+a.label:hover,
+a.label:focus {
 	color: white;
 }
+
 a.label.new {
 	background-color: #d0d0d0;
 }
+
 a#actions-button {
 	float: right;
 	z-index: 499;
@@ -57,59 +39,122 @@ a#actions-button {
 
 /* rtl an ltr */
 
-[dir=ltr] * {
+[ dir='ltr' ] * {
 	direction: ltr;
 }
-[dir=rtl] * {
+
+[ dir='rtl' ] * {
 	direction: rtl;
 }
-[dir=ltr] {
+
+[ dir='ltr' ] {
 	direction: ltr;
 }
-[dir=rtl] {
+
+[ dir='rtl' ] {
 	direction: rtl;
 }
 
 /* Reset all table CSS from Foundation styles back to MediaWiki */
-table { width: 0; }
-td.mw-label { width: 0; }
-td.smwpropname, th.smwpropname, td.smwspecname { text-align: inherit; }
-table tbody tr td, table tr td { line-height: inherit; }
-table { background: transparent; margin-bottom: 1.25em; border: 0; }
-table thead, table tfoot { background: 0; font-weight: normal; }
-table thead tr th, table thead tr td, table tfoot tr th, table tfoot tr td { padding: 0; font-size: 100%; color: inherit; text-align: inherit; }
-table tr th, table tr td { padding: 0; font-size: 100%; color: inherit; }
-table tr.even, table tr.alt, table tr:nth-of-type(even) { background: transparent; }
-table thead tr th, table tfoot tr th, table tbody tr td, table tr td, table tfoot tr td { display: table-cell; line-height: inherit; text-align: inherit; }
+table {
+	width: 0;
+}
+
+td.mw-label {
+	width: 0;
+}
+
+td.smwpropname,
+th.smwpropname,
+td.smwspecname {
+	text-align: inherit;
+}
+
+table tbody tr td,
+table tr td {
+	line-height: inherit;
+}
+
+table {
+	background: transparent;
+	margin-bottom: 1.25em;
+	border: 0;
+}
+
+table thead,
+table tfoot {
+	background: 0;
+	font-weight: normal;
+}
+
+table thead tr th,
+table thead tr td,
+table tfoot tr th,
+table tfoot tr td {
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+	text-align: inherit;
+}
+
+table tr th,
+table tr td {
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+table tr.even,
+table tr.alt,
+table tr:nth-of-type( even ) {
+	background: transparent;
+}
+
+table thead tr th,
+table tfoot tr th,
+table tbody tr td,
+table tr td,
+table tfoot tr td {
+	display: table-cell;
+	line-height: inherit;
+	text-align: inherit;
+}
 
 /* wikitable classes reset */
 table.wikitable {
-  margin: 1em 0;
+	margin: 1em 0;
 }
+
 table.wikitable > tr > th,
 table.wikitable > * > tr > th {
-  text-align: inherit;
+	text-align: inherit;
 }
 
 /* Style MW Table of Contents */
 
-.toctoggle, .toctoggle a {
+.toctoggle,
+.toctoggle a {
 	line-height: 2em;
 	display: inline;
 	vertical-align: top;
 }
+
 #toctitle h2 {
 	display: inline;
 	font-size: 1.8rem;
 }
-#toc, .toc {
+
+#toc,
+.toc {
 	padding: 1em 1em;
-	border: 1px solid #dddddd;
+	border: 1px solid #ddd;
 	display: inline-block;
 	width: auto;
 	margin: 1.5em 0;
 }
-#toc ul, .toc ul {
+
+#toc ul,
+.toc ul {
 	list-style-type: none;
 	list-style-image: none;
 	padding: 0;
@@ -118,7 +163,8 @@ table.wikitable > * > tr > th {
 
 /* Hide the page actions button for special pages (cuz there's nothing in it) */
 
-.mw-special-FormEdit a#actions-button, .ns-special a#actions-button {
+.mw-special-FormEdit a#actions-button,
+.ns-special a#actions-button {
 	display: none;
 }
 
@@ -140,6 +186,7 @@ body.action-formedit .row.hide-on-form-edit {
 	z-index: 500;
 	white-space: nowrap;
 }
+
 #p-cactions #actions a {
 	width: 100%;
 	text-align: left;
@@ -150,6 +197,7 @@ body.action-formedit .row.hide-on-form-edit {
 #toolbox-dropdown {
 	z-index: 601;
 }
+
 #personal-tools-dropdown {
 	z-index: 601;
 }
@@ -160,46 +208,63 @@ body.action-formedit .row.hide-on-form-edit {
 	display: inline;
 	margin-right: 4px;
 }
-td.mw-submit a, .htmlform-tip, #mw-upload-permitted p {
+
+td.mw-submit a,
+.htmlform-tip,
+#mw-upload-permitted p {
 	font-size: 90%;
 }
+
 alert.label a {
 	color: pink;
 }
+
 code {
 	font-weight: normal;
-	color: #222222;
+	color: #222;
 }
+
 small {
 	font-size: 80%;
 }
+
 h4.namespace.label {
 	font-size: 1rem;
 	display: inline-block;
 	margin-bottom: 0.5rem;
 }
+
 .label {
 	padding-bottom: 0.39em;
 }
+
 h2 span {
 	display: inline-block;
 }
+
 h2.title {
 	margin-bottom: 0.1em;
 }
+
 h3#tagline {
 	font-style: italic;
 	font-size: small;
 	margin-bottom: 0.5em;
 	color: #6f6f6f;
 }
+
 .clear_both {
 	clear: both;
 }
-.large-2 strong, .large-2 b {
+
+.large-2 strong,
+.large-2 b {
 	display: block;
 }
-.large-2 strong, .large-2 b, table th {
+
+.large-2 strong,
+.large-2 b,
+table th {
 	font-size: 0.875em;
 	color: #4d4d4d;
 	font-weight: 500;
@@ -210,23 +275,28 @@ h3#tagline {
 .row .row {
 	margin-bottom: 0.9em;
 }
+
 div.small-10 .row {
 	margin: 1em 0 0 0;
 }
+
 div.small-9.columns textarea {
 	margin-bottom: 0.25em;
 }
+
 footer.row {
 	margin-top: 2em;
 	color: grey;
 }
+
 div {
-	line-height: 1.60em;
+	line-height: 1.6em;
 }
 
 /* NOTICES, ALERTS, WARNINGS */
 
-div#userloginprompt, p#userloginlink {
+div#userloginprompt,
+p#userloginlink {
 	font-size: 80%;
 }
 
@@ -234,14 +304,14 @@ div#userloginprompt, p#userloginlink {
 
 ul#actions.f-dropdown {
 	margin-left: 0;
-	margin-top: .5em;
-	margin-bottom: .25em;
-	padding: .25em;
+	margin-top: 0.5em;
+	margin-bottom: 0.25em;
+	padding: 0.25em;
 }
 
 dl {
-    margin-bottom: 0em;
-    margin-top: .75em;
+	margin-bottom: 0;
+	margin-top: 0.75em;
 }
 
 /* Override MW legacy.module for all skins styling of ul and ol */
@@ -289,7 +359,6 @@ dl {
 
 /* Tabs */
 
-
 /* make sure tabs ul element has no margins */
 
 #mw-content-text ul.tabs {
@@ -298,7 +367,8 @@ dl {
 
 /* stop focus outline */
 
-.tabs dd.active>a, .tabs .tab-title.active>a:focus {
+.tabs dd.active > a,
+.tabs .tab-title.active > a:focus {
 	outline: none;
 }
 
@@ -307,13 +377,16 @@ dl {
 #mw-content-text .orbit-container ul {
 	margin: 0;
 }
+
 footer.row ul {
 	list-style-type: none;
 	margin: 0 0 1em 0;
 }
+
 footer.row ul.views.columns li {
 	margin-right: 1em;
 }
+
 #footer footer.row ul {
 	margin: 0;
 	list-style-type: none;
@@ -322,18 +395,21 @@ footer.row ul.views.columns li {
 /* Make social follow float right */
 
 .social-follow {
-    text-align: center;
+	text-align: center;
 }
-div.social-follow div[class*="addthis"] {
-    text-align: left;
-    display: inline-block;
+
+div.social-follow div[ class*='addthis' ] {
+	text-align: left;
+	display: inline-block;
 }
 
 /* end social footer classes */
 
-#footer-left, #footer-left-ul {
+#footer-left,
+#footer-left-ul {
 	text-align: left;
 }
+
 #footer-left-ul {
 	font-size: 90%;
 }
@@ -342,113 +418,145 @@ div.social-follow div[class*="addthis"] {
 	font-size: 85%;
 	text-align: center;
 }
+
 #footer-right-icons li {
 	display: inline-block;
 	text-align: center;
-	margin: 0 0 .5em .5em;
+	margin: 0 0 0.5em 0.5em;
 }
+
 li#footer-privacy {
 	float: left;
 	margin-right: 2em;
 }
+
 li#footer-about {
 	float: left;
 	margin-right: 2em;
 }
+
 li#footer-disclaimer {
 	float: left;
 	margin-right: 2em;
 }
 
-.text-center #footer-left li, .text-center #footer-left-ul li {
+.text-center #footer-left li,
+.text-center #footer-left-ul li {
 	float: none;
 	margin: 0;
 }
-.text-center #footer-left, .text-center #footer-left-ul {
+
+.text-center #footer-left,
+.text-center #footer-left-ul {
 	text-align: center;
 }
-@media only screen and (max-width: 641px) {
+
+@media only screen and ( max-width: 641px ) {
 	#footer-left {
 		text-align: center;
 	}
+
 	#footer-left-ul {
 		font-size: 85%;
 	}
+
 	#footer-right-icons {
 		font-size: 80%;
 	}
+
 	li#footer-privacy {
 		float: none;
 		margin-right: 0;
 	}
+
 	li#footer-about {
 		float: none;
 		margin-right: 0;
 	}
+
 	li#footer-disclaimer {
 		float: none;
 		margin-right: 0;
 	}
 }
+
 .columns ul.special li {
 	float: none;
 	width: 100%;
 }
+
 .columns div#uploadtext ul {
 	list-style-type: disc;
 }
+
 .columns div#uploadtext ul li {
 	float: none;
 	width: 95%;
 	margin-left: 2em;
 }
+
 #catlinks {
 	border: 1px solid #aaa;
 	padding: 0.25rem;
 }
+
 #catlinks .label {
-	font-size: .9rem;
+	font-size: 0.9rem;
 }
+
 #catlinks a.label.new {
-	background-color: #BA0F2A;
+	background-color: #ba0f2a;
 }
+
 .catlinks li {
 	border-left: none;
 }
+
 .mw-specialpages-table td ul.columns li {
 	width: 50%;
 }
 
-/*#mw-content-text .columns li {float:none;width:90%;}*/
+/* #mw-content-text .columns li {float:none;width:90%;} */
 
 footer.row ul.columns li {
 	display: inline;
 	float: none;
 }
+
 .columns #mw-normal-catlinks ul li {
 	float: none;
 	width: auto;
 }
+
 #mw-normal-catlinks a.new {
 	color: white;
 }
+
 ul.vcard {
 	padding: 0.5em 0.5em 0.55em 0.5em;
 }
 
 /* HEADERS */
 
-h1, h2, h3, h4, h5, h6 {
-	margin-top: 0em;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
 	line-height: 1em;
 }
+
 .page-Special_SpecialPages h2 {
 	margin-bottom: 0.5em;
 }
+
 .editsection {
 	font-weight: normal;
 	font-size: 0.4em;
 }
+
 p.title {
 	padding: 0.9375em;
 }
@@ -459,50 +567,72 @@ p.title {
 	float: right;
 	width: auto;
 }
+
 .mw-content-rtl table#toc {
 	float: left;
 	width: auto;
 }
+
 table.formtable {
 	border: none;
 }
-table td[align="right"] {
+
+table td[ align='right' ] {
 	text-align: right;
 }
 
 /* TURN OFF TABLE STRIPING FOR EDITFORMS */
 
-table.formedit tr.even, table.formedit tr.alt, table.formedit tr:nth-of-type(even) {
+table.formedit tr.even,
+table.formedit tr.alt,
+table.formedit tr:nth-of-type( even ) {
 	background: transparent;
 }
+
 table {
 	width: 100%;
 }
+
 td.mw-label {
 	width: 20%;
 }
+
 td.mw-input {
 	width: 80%;
 }
+
 thead tr th {
 	cursor: pointer;
 }
+
 table.formtable th {
 	text-align: right !important;
 }
-td.smwpropname, th.smwpropname, td.smwspecname {
+
+td.smwpropname,
+th.smwpropname,
+td.smwspecname {
 	text-align: left;
 }
-table tbody tr td, table tr td {
+
+table tbody tr td,
+table tr td {
 	line-height: 1.6em;
 }
+
 table.wikitable {
-	margin: 0em 0 1em 0;
+	margin: 0 0 1em 0;
 }
-table.wikitable>tr>th, table.wikitable>*>tr>th {
+
+table.wikitable > tr > th,
+table.wikitable > * > tr > th {
 	text-align: left;
 }
-table.wikitable>tr>th, table.wikitable>tr>td, table.wikitable>*>tr>th, table.wikitable>*>tr>td {
+
+table.wikitable > tr > th,
+table.wikitable > tr > td,
+table.wikitable > * > tr > th,
+table.wikitable > * > tr > td {
 	border: 3px #fff solid;
 	padding: 0.6em;
 }
@@ -512,28 +642,47 @@ table.wikitable>tr>th, table.wikitable>tr>td, table.wikitable>*>tr>th, table.wik
 .multipleTemplateInstance {
 	background-color: white !important;
 	border: none !important;
-	border-bottom: 1px dashed #999999 !important;
+	border-bottom: 1px dashed #999 !important;
 }
+
 .multipleTemplateInstance table {
 	border: none !important;
 }
+
 .multipleTemplateAdder {
 	font-size: 0.9em;
 	padding: 0.4125em 0.5em 0.55em 0.5em;
 }
+
 .novalue {
-	color: #999999;
+	color: #999;
 	font-style: italic;
 	font-size: small;
 }
-input[type="file"], input[type="checkbox"], input[type="radio"], select {
+
+input[ type='file' ],
+input[ type='checkbox' ],
+input[ type='radio' ],
+select {
 	padding: 5px;
 }
-input[type="file"], select {
+
+input[ type='file' ],
+select {
 	padding: 5px;
-	border: 1px solid #cccccc;
+	border: 1px solid #ccc;
 }
-.inputSpan select.createboxInput, .dateInput select.monthInput, input.hourInput, input.minuteInput, input.secondInput, input.dayInput, input.yearInput, input[name="*[* date][hour]"], input[name="*[* date][minute]"], input[name="*[* date][second]"] {
+
+.inputSpan select.createboxInput,
+.dateInput select.monthInput,
+input.hourInput,
+input.minuteInput,
+input.secondInput,
+input.dayInput,
+input.yearInput,
+input[ name='*[* date][hour]' ],
+input[ name='*[* date][minute]' ],
+input[ name='*[* date][second]' ] {
 	width: auto;
 	margin-right: 1em;
 }
@@ -544,64 +693,87 @@ input[type="file"], select {
 }
 */
 
-.inputSpan button, .inputSpan .button {
+.inputSpan button,
+.inputSpan .button {
 	margin: -4px 0 0 0;
-	padding: 0.37em 0.75em 0.6em 0.70em;
+	padding: 0.37em 0.75em 0.6em 0.7em;
 }
-.ms-selectable input[type="text"] {
+
+.ms-selectable input[ type='text' ] {
 	width: 100%;
 }
+
 button.ui-button-icon-only {
 	height: 2.24em !important;
 }
+
 select {
 	width: auto;
 }
-input[type="checkbox"].createboxInput {
+
+input[ type='checkbox' ].createboxInput {
 	width: auto;
 }
+
 label.checkboxLabel {
 	margin-right: 0.5em;
 }
+
 .edit_with_form {
 	margin: -2em 0 0 0;
 	float: right;
 }
-input[type="radio"], input[type="checkbox"] {
+
+input[ type='radio' ],
+input[ type='checkbox' ] {
 	display: inline;
 }
-input[type='file'] {
+
+input[ type='file' ] {
 	margin-top: 0.4em;
 }
-input:not([type]), textarea, p.meta {
+
+input:not( [ type ] ),
+textarea,
+p.meta {
 	margin-bottom: 4px;
 }
+
 label {
 	display: inline;
 	font-weight: normal;
 }
+
 .mw-input label {
 	font-weight: normal;
 }
-#mw-content-text ul.SFI_timepicker_hours, #mw-content-text ul.SFI_timepicker_minutes {
+
+#mw-content-text ul.SFI_timepicker_hours,
+#mw-content-text ul.SFI_timepicker_minutes {
 	list-style-type: none;
 }
+
 #mw-content-text ul.SFI_timepicker_hours li {
 	margin: 2px 2px;
 	padding: 4px;
 }
+
 .sminput.sminput-googlemaps3 p button {
 	padding-top: 0.35em;
 	padding-bottom: 0.6em;
 }
+
 li label.inline {
 	margin-bottom: 2px;
 	padding: 0;
 }
-button, .button {
+
+button,
+.button {
 	margin: 0.5em 0;
 	padding: 0.3em 0.75em 0.4em 0.75em;
 }
+
 .top-bar-logo {
 	max-width: 100%;
 	height: auto;
@@ -610,56 +782,69 @@ button, .button {
 	display: inline-block;
 	vertical-align: middle;
 }
+
 .top-bar .button.search {
-	top: 0px;
+	top: 0;
 }
-.top-bar .button, .top-bar button {
-	padding-top: .35rem;
-	padding-bottom: .35rem;
+
+.top-bar .button,
+.top-bar button {
+	padding-top: 0.35rem;
+	padding-bottom: 0.35rem;
 }
+
 .top-bar .button.search {
 	margin-left: 10px;
 }
+
 .top-bar input {
-	top: 0px;
+	top: 0;
 }
-@media only screen and (min-width: 641px) {
+
+@media only screen and ( min-width: 641px ) {
 	.top-bar .button.search {
-		top: 0px;
+		top: 0;
 	}
+
 	.top-bar .button.search {
 		margin-left: -4px;
 	}
+
 	.top-bar {
 		height: auto;
 	}
 }
+
 .top-bar-section .dropdown {
 	z-index: 600;
 }
-input[type="submit"] {
+
+input[ type='submit' ] {
 	background-color: #5da423;
 	border-color: #457a1a;
 	color: white;
-	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+	-webkit-box-shadow: 0 1px 0 rgba( 255, 255, 255, 0.5 ) inset;
+	box-shadow: 0 1px 0 rgba( 255, 255, 255, 0.5 ) inset;
 	-webkit-transition: background-color 300ms ease-out;
 	-moz-transition: background-color 300ms ease-out;
 	transition: background-color 300ms ease-out;
 }
+
 input#wpPreview {
 	background-color: #5da423;
 	border-color: #457a1a;
 	color: white;
-	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+	-webkit-box-shadow: 0 1px 0 rgba( 255, 255, 255, 0.5 ) inset;
+	box-shadow: 0 1px 0 rgba( 255, 255, 255, 0.5 ) inset;
 	-webkit-transition: background-color 300ms ease-out;
 	-moz-transition: background-color 300ms ease-out;
 	transition: background-color 300ms ease-out;
 }
-.editButtons input[type="submit"] {
+
+.editButtons input[ type='submit' ] {
 	display: inline-block;
 }
+
 legend {
 	font-size: 0.875em;
 	color: #4d4d4d;
@@ -667,12 +852,15 @@ legend {
 	display: block;
 	font-weight: 500;
 }
+
 fieldset {
 	line-height: 1.6em;
 	padding: 0 1.25em 1em 1.25em;
 	margin-top: 0;
 }
-span.smwbuiltin, span.smwttactiveinline span.smwbuiltin {
+
+span.smwbuiltin,
+span.smwttactiveinline span.smwbuiltin {
 	font-style: normal;
 }
 
@@ -691,14 +879,14 @@ div.mw-htmlform-field-HTMLCheckField div.mw-label {
 /* firstHeading Fix */
 
 h1#firstHeading {
-    font-size: 2.125rem;
+	font-size: 2.125rem;
 	margin: 0;
 }
 
-@media only screen and (min-width: 40.0625em) {
-h1#firstHeading {
-    font-size: 2.75rem;
-}
+@media only screen and ( min-width: 40.0625em ) {
+	h1#firstHeading {
+		font-size: 2.75rem;
+	}
 }
 
 /* Don't like the black top bar? Copy this into your Foreground.css and change the colors
@@ -711,7 +899,6 @@ h1#firstHeading {
     background: #333333;
 }
 
-
 .top-bar-section > ul > .divider,
 .top-bar-section > ul > [role="separator"] {
   border-color: black;
@@ -722,18 +909,21 @@ h1#firstHeading {
 .vertical-divider {
 	width: 100%;
 	display: block;
-	background: #1A1A1A;
+	background: #1a1a1a;
 	height: 1px;
 }
-.top-bar-section li.active:not(.has-form) a:not(.button), .top-bar-section li.active:not(.has-form) a:hover:not(.button) {
+
+.top-bar-section li.active:not( .has-form ) a:not( .button ),
+.top-bar-section li.active:not( .has-form ) a:hover:not( .button ) {
 	background: inherit;
 }
+
 .top-bar input {
 	width: auto;
 	display: inline;
 }
 
-/*Fix ULS CSS */
+/* Fix ULS CSS */
 
 #pt-uls a.uls-trigger {
 	padding-left: 15px !important;
@@ -744,18 +934,18 @@ h1#firstHeading {
 .orbit-container .orbit-slides-container img {
 	width: 100%;
 }
+
 .orbit-bullets {
 	margin: 0 auto 30px auto !important;
 }
 
 /* Block-Grid UL fixes */
 
-ul[class*="block-grid"] {
+ul[ class*='block-grid' ] {
 	margin: 0;
 }
 
 /* WikiEditor related fixes */
-
 
 /* lable of toolbar */
 
@@ -775,26 +965,33 @@ ul[class*="block-grid"] {
 	line-height: 1.6;
 	font-size: 0.875em;
 	position: relative;
-	margin: -1em .5em 0;
+	margin: -1em 0.5em 0;
 	max-height: 30px;
 	width: auto;
 	z-index: 1;
 }
+
 .mw-indicator {
 	display: inline-block;
 }
+
 body {
 	line-height: 1.6em;
 }
+
 p {
 	margin-bottom: 0.25em;
 }
-a.label:hover, a.label:focus {
+
+a.label:hover,
+a.label:focus {
 	color: white;
 }
+
 a.label.new {
 	background-color: #d0d0d0;
 }
+
 a#actions-button {
 	float: right;
 	z-index: 499;
@@ -802,7 +999,8 @@ a#actions-button {
 
 /* Hide the page actions button for special pages (cuz there's nothing in it) */
 
-.mw-special-FormEdit a#actions-button, .ns-special a#actions-button {
+.mw-special-FormEdit a#actions-button,
+.ns-special a#actions-button {
 	display: none;
 }
 
@@ -824,6 +1022,7 @@ body.action-formedit .row.hide-on-form-edit {
 	z-index: 500;
 	white-space: nowrap;
 }
+
 #p-cactions #actions a {
 	width: 100%;
 	text-align: left;
@@ -834,6 +1033,7 @@ body.action-formedit .row.hide-on-form-edit {
 #toolbox-dropdown {
 	z-index: 601;
 }
+
 #personal-tools-dropdown {
 	z-index: 601;
 }
@@ -844,52 +1044,70 @@ body.action-formedit .row.hide-on-form-edit {
 	display: inline;
 	margin-right: 4px;
 }
-td.mw-submit a, .htmlform-tip, #mw-upload-permitted p {
+
+td.mw-submit a,
+.htmlform-tip,
+#mw-upload-permitted p {
 	font-size: 90%;
 }
+
 alert.label a {
 	color: pink;
 }
+
 code {
 	font-weight: normal;
-	color: #222222;
+	color: #222;
 }
+
 small {
 	font-size: 80%;
 }
+
 h4.namespace.label {
 	font-size: 1rem;
 	display: inline-block;
 	margin-bottom: 0.5rem;
 }
+
 .label {
 	padding-bottom: 0.39em;
 }
+
 h2 span {
 	display: inline-block;
 }
+
 span.title {
 	margin-bottom: 0.1em;
 }
+
 .title-name {
 	font-size: 1.3rem;
-	margin: 0 .5em;
-	color: #FFF;
+	margin: 0 0.5em;
+	color: #fff;
 	line-height: 2em;
 }
+
 h3#tagline {
 	font-style: italic;
 	font-size: small;
 	margin-bottom: 0.5em;
 	color: #6f6f6f;
 }
+
 .clear_both {
 	clear: both;
 }
-.large-2 strong, .large-2 b {
+
+.large-2 strong,
+.large-2 b {
 	display: block;
 }
-.large-2 strong, .large-2 b, table th {
+
+.large-2 strong,
+.large-2 b,
+table th {
 	font-size: 0.875em;
 	color: #4d4d4d;
 	font-weight: 500;
@@ -900,23 +1118,28 @@ h3#tagline {
 .row .row {
 	margin-bottom: 0.9em;
 }
+
 div.small-10 .row {
 	margin: 1em 0 0 0;
 }
+
 div.small-9.columns textarea {
 	margin-bottom: 0.25em;
 }
+
 footer.row {
 	margin-top: 2em;
 	color: grey;
 }
+
 div {
-	line-height: 1.60em;
+	line-height: 1.6em;
 }
 
 /* NOTICES, ALERTS, WARNINGS */
 
-div#userloginprompt, p#userloginlink {
+div#userloginprompt,
+p#userloginlink {
 	font-size: 80%;
 }
 
@@ -925,13 +1148,16 @@ div#userloginprompt, p#userloginlink {
 #mw-content-text .orbit-container ul {
 	margin: 0;
 }
+
 footer.row ul {
 	list-style-type: none;
 	margin: 0 0 1em 0;
 }
+
 footer.row ul.views.columns li {
 	margin-right: 1em;
 }
+
 #footer footer.row ul {
 	margin: 0;
 	list-style-type: none;
@@ -974,114 +1200,145 @@ footer.row ul.views.columns li {
 	font-size: 90%;
 	text-align: left;
 }
+
 #footer-right-icons {
 	font-size: 85%;
 	text-align: center;
 }
+
 #footer-right-icons li {
 	display: inline-block;
 	text-align: center;
-	margin: 0 0 .5em .5em;
+	margin: 0 0 0.5em 0.5em;
 }
+
 li#footer-privacy {
 	float: left;
 	margin-right: 2em;
 }
+
 li#footer-about {
 	float: left;
 	margin-right: 2em;
 }
+
 li#footer-disclaimer {
 	float: left;
 	margin-right: 2em;
 }
+
 .text-center #footer-left li {
 	float: none;
 	margin: 0;
 }
+
 .text-center #footer-left {
 	text-align: center;
 }
-@media only screen and (max-width: 641px) {
+
+@media only screen and ( max-width: 641px ) {
 	#footer-left {
 		font-size: 85%;
 		text-align: center;
 	}
+
 	#footer-right-icons {
 		font-size: 80%;
 	}
+
 	li#footer-privacy {
 		float: none;
 		margin-right: 0;
 	}
+
 	li#footer-about {
 		float: none;
 		margin-right: 0;
 	}
+
 	li#footer-disclaimer {
 		float: none;
 		margin-right: 0;
 	}
 }
+
 .columns ul.special li {
 	float: none;
 	width: 100%;
 }
+
 .columns div#uploadtext ul {
 	list-style-type: disc;
 }
+
 .columns div#uploadtext ul li {
 	float: none;
 	width: 95%;
 	margin-left: 2em;
 }
+
 #catlinks {
 	border: 1px solid #aaa;
 	padding: 0.25rem;
 }
+
 #catlinks .label {
-	font-size: .9rem;
+	font-size: 0.9rem;
 }
+
 #catlinks a.label.new {
-	background-color: #BA0F2A;
+	background-color: #ba0f2a;
 }
+
 .catlinks li {
 	border-left: none;
 }
+
 .mw-specialpages-table td ul.columns li {
 	width: 50%;
 }
 
-/*#mw-content-text .columns li {float:none;width:90%;}*/
+/* #mw-content-text .columns li {float:none;width:90%;} */
 
 footer.row ul.columns li {
 	display: inline;
 	float: none;
 }
+
 .columns #mw-normal-catlinks ul li {
 	float: none;
 	width: auto;
 }
+
 #mw-normal-catlinks a.new {
 	color: white;
 }
+
 ul.vcard {
 	padding: 0.5em 0.5em 0.55em 0.5em;
 }
 
 /* HEADERS */
 
-h1, h2, h3, h4, h5, h6 {
-	margin-top: .75em;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0.75em;
 	line-height: 1em;
 }
+
 .page-Special_SpecialPages h2 {
 	margin-bottom: 0.5em;
 }
+
 .editsection {
 	font-weight: normal;
 	font-size: 0.4em;
 }
+
 p.title {
 	padding: 0.9375em;
 }
@@ -1092,50 +1349,72 @@ p.title {
 	float: right;
 	width: auto;
 }
+
 .mw-content-rtl table#toc {
 	float: left;
 	width: auto;
 }
+
 table.formtable {
 	border: none;
 }
-table td[align="right"] {
+
+table td[ align='right' ] {
 	text-align: right;
 }
 
 /* TURN OFF TABLE STRIPING FOR EDITFORMS */
 
-table.formedit tr.even, table.formedit tr.alt, table.formedit tr:nth-of-type(even) {
+table.formedit tr.even,
+table.formedit tr.alt,
+table.formedit tr:nth-of-type( even ) {
 	background: transparent;
 }
+
 table {
 	width: 100%;
 }
+
 td.mw-label {
 	width: 20%;
 }
+
 td.mw-input {
 	width: 80%;
 }
+
 thead tr th {
 	cursor: pointer;
 }
+
 table.formtable th {
 	text-align: right !important;
 }
-td.smwpropname, th.smwpropname, td.smwspecname {
+
+td.smwpropname,
+th.smwpropname,
+td.smwspecname {
 	text-align: left;
 }
-table tbody tr td, table tr td {
+
+table tbody tr td,
+table tr td {
 	line-height: 1.6em;
 }
+
 table.wikitable {
-	margin: 0em 0 1em 0;
+	margin: 0 0 1em 0;
 }
-table.wikitable>tr>th, table.wikitable>*>tr>th {
+
+table.wikitable > tr > th,
+table.wikitable > * > tr > th {
 	text-align: left;
 }
-table.wikitable>tr>th, table.wikitable>tr>td, table.wikitable>*>tr>th, table.wikitable>*>tr>td {
+
+table.wikitable > tr > th,
+table.wikitable > tr > td,
+table.wikitable > * > tr > th,
+table.wikitable > * > tr > td {
 	border: 3px #fff solid;
 	padding: 0.6em;
 }
@@ -1145,28 +1424,47 @@ table.wikitable>tr>th, table.wikitable>tr>td, table.wikitable>*>tr>th, table.wik
 .multipleTemplateInstance {
 	background-color: white !important;
 	border: none !important;
-	border-bottom: 1px dashed #999999 !important;
+	border-bottom: 1px dashed #999 !important;
 }
+
 .multipleTemplateInstance table {
 	border: none !important;
 }
+
 .multipleTemplateAdder {
 	font-size: 0.9em;
 	padding: 0.4125em 0.5em 0.55em 0.5em;
 }
+
 .novalue {
-	color: #999999;
+	color: #999;
 	font-style: italic;
 	font-size: small;
 }
-input[type="file"], input[type="checkbox"], input[type="radio"], select {
+
+input[ type='file' ],
+input[ type='checkbox' ],
+input[ type='radio' ],
+select {
 	padding: 5px;
 }
-input[type="file"], select {
+
+input[ type='file' ],
+select {
 	padding: 5px;
-	border: 1px solid #cccccc;
+	border: 1px solid #ccc;
 }
-.inputSpan select.createboxInput, .dateInput select.monthInput, input.hourInput, input.minuteInput, input.secondInput, input.dayInput, input.yearInput, input[name="*[* date][hour]"], input[name="*[* date][minute]"], input[name="*[* date][second]"] {
+
+.inputSpan select.createboxInput,
+.dateInput select.monthInput,
+input.hourInput,
+input.minuteInput,
+input.secondInput,
+input.dayInput,
+input.yearInput,
+input[ name='*[* date][hour]' ],
+input[ name='*[* date][minute]' ],
+input[ name='*[* date][second]' ] {
 	width: auto;
 	margin-right: 1em;
 }
@@ -1177,79 +1475,106 @@ input[type="file"], select {
 }
 */
 
-.inputSpan button, .inputSpan .button {
+.inputSpan button,
+.inputSpan .button {
 	margin: -4px 0 0 0;
-	padding: 0.37em 0.75em 0.6em 0.70em;
+	padding: 0.37em 0.75em 0.6em 0.7em;
 }
-.ms-selectable input[type="text"] {
+
+.ms-selectable input[ type='text' ] {
 	width: 100%;
 }
+
 button.ui-button-icon-only {
 	height: 2.24em !important;
 }
-input[type="search"] {
-    margin: 0;
+
+input[ type='search' ] {
+	margin: 0;
 }
-input[type="date"] {
-    margin: .5rem 0;
+
+input[ type='date' ] {
+	margin: 0.5rem 0;
 }
-input[type="date"] {
-    width: auto;
-}
-input[type="file"] {
-    margin: .5rem 0;
-}
-input:not([type]), textarea, p.meta {
-    margin: .5rem 0;
-}
-input[type="text"] {
-    padding: 5px 20px 5px 5px;
-    margin: .5rem 0;
-}
-select {
-    padding: 5px 20px 5px 5px;
-    margin: .5rem 0;
-    width: auto;
-}
-input[type="checkbox"].createboxInput {
+
+input[ type='date' ] {
 	width: auto;
 }
+
+input[ type='file' ] {
+	margin: 0.5rem 0;
+}
+
+input:not( [ type ] ),
+textarea,
+p.meta {
+	margin: 0.5rem 0;
+}
+
+input[ type='text' ] {
+	padding: 5px 20px 5px 5px;
+	margin: 0.5rem 0;
+}
+
+select {
+	padding: 5px 20px 5px 5px;
+	margin: 0.5rem 0;
+	width: auto;
+}
+
+input[ type='checkbox' ].createboxInput {
+	width: auto;
+}
+
 label.checkboxLabel {
 	margin-right: 0.5em;
 }
+
 .edit_with_form {
 	margin: -2em 0 0 0;
 	float: right;
 }
-input[type="radio"], input[type="checkbox"] {
+
+input[ type='radio' ],
+input[ type='checkbox' ] {
 	display: inline;
 }
+
 label {
 	display: inline;
 	font-weight: normal;
 }
+
 .mw-input label {
 	font-weight: normal;
 }
-#mw-content-text ul.SFI_timepicker_hours, #mw-content-text ul.SFI_timepicker_minutes {
+
+#mw-content-text ul.SFI_timepicker_hours,
+#mw-content-text ul.SFI_timepicker_minutes {
 	list-style-type: none;
 }
+
 #mw-content-text ul.SFI_timepicker_hours li {
 	margin: 2px 2px;
 	padding: 4px;
 }
+
 .sminput.sminput-googlemaps3 p button {
 	padding-top: 0.35em;
 	padding-bottom: 0.6em;
 }
+
 li label.inline {
 	margin-bottom: 2px;
 	padding: 0;
 }
-button, .button {
+
+button,
+.button {
 	margin: 0.5em 0;
 	padding: 0.3em 0.75em 0.4em 0.75em;
 }
+
 .top-bar-logo {
 	max-width: 100%;
 	height: auto;
@@ -1258,56 +1583,69 @@ button, .button {
 	display: inline-block;
 	vertical-align: middle;
 }
+
 .top-bar .button.search {
-	top: 0px;
+	top: 0;
 }
-.top-bar .button, .top-bar button {
-	padding-top: .35rem;
-	padding-bottom: .35rem;
+
+.top-bar .button,
+.top-bar button {
+	padding-top: 0.35rem;
+	padding-bottom: 0.35rem;
 }
+
 .top-bar .button.search {
 	margin-left: 10px;
 }
+
 .top-bar input {
-	top: 0px;
+	top: 0;
 }
-@media only screen and (min-width: 641px) {
+
+@media only screen and ( min-width: 641px ) {
 	.top-bar .button.search {
-		top: 0px;
+		top: 0;
 	}
+
 	.top-bar .button.search {
 		margin-left: -4px;
 	}
+
 	.top-bar {
 		height: auto;
 	}
 }
+
 .top-bar-section .dropdown {
 	z-index: 600;
 }
-input[type="submit"] {
+
+input[ type='submit' ] {
 	background-color: #5da423;
 	border-color: #457a1a;
 	color: white;
-	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+	-webkit-box-shadow: 0 1px 0 rgba( 255, 255, 255, 0.5 ) inset;
+	box-shadow: 0 1px 0 rgba( 255, 255, 255, 0.5 ) inset;
 	-webkit-transition: background-color 300ms ease-out;
 	-moz-transition: background-color 300ms ease-out;
 	transition: background-color 300ms ease-out;
 }
+
 input#wpPreview {
 	background-color: #e9e9e9;
 	border-color: #d0d0d0;
 	color: black;
-	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+	-webkit-box-shadow: 0 1px 0 rgba( 255, 255, 255, 0.5 ) inset;
+	box-shadow: 0 1px 0 rgba( 255, 255, 255, 0.5 ) inset;
 	-webkit-transition: background-color 300ms ease-out;
 	-moz-transition: background-color 300ms ease-out;
 	transition: background-color 300ms ease-out;
 }
-.editButtons input[type="submit"] {
+
+.editButtons input[ type='submit' ] {
 	display: inline-block;
 }
+
 legend {
 	font-size: 0.875em;
 	color: #4d4d4d;
@@ -1315,12 +1653,15 @@ legend {
 	display: block;
 	font-weight: 500;
 }
+
 fieldset {
 	line-height: 1.6em;
 	padding: 0 1.25em 1em 1.25em;
 	margin-top: 0;
 }
-span.smwbuiltin, span.smwttactiveinline span.smwbuiltin {
+
+span.smwbuiltin,
+span.smwttactiveinline span.smwbuiltin {
 	font-style: normal;
 }
 
@@ -1333,12 +1674,15 @@ div.mw-htmlform-field-HTMLCheckField div.mw-label {
 .vertical-divider {
 	width: 100%;
 	display: block;
-	background: #1A1A1A;
+	background: #1a1a1a;
 	height: 1px;
 }
-.top-bar-section li.active:not(.has-form) a:not(.button), .top-bar-section li.active:not(.has-form) a:hover:not(.button) {
+
+.top-bar-section li.active:not( .has-form ) a:not( .button ),
+.top-bar-section li.active:not( .has-form ) a:hover:not( .button ) {
 	background: inherit;
 }
+
 .top-bar input {
 	width: auto;
 	display: inline;
@@ -1349,11 +1693,12 @@ div.mw-htmlform-field-HTMLCheckField div.mw-label {
 #echo-notifications {
 	float: right;
 	display: inline-block;
-	margin: -1em 1em .5em;
+	margin: -1em 1em 0.5em;
 	position: relative;
 	z-index: 500;
 	max-height: 30px;
 }
+
 #echo-notifications-notice,
 #echo-notifications-alerts,
 #echo-notifications-messages,
@@ -1367,42 +1712,48 @@ div.mw-htmlform-field-HTMLCheckField div.mw-label {
 	background-size: 1.4em !important;
 	font-size: 1.1em;
 	color: transparent;
-	filter: invert(15%);
+	filter: invert( 15% );
 	height: auto !important;
 	display: block !important;
 }
+
 #echo-notifications li {
 	list-style: none;
 }
+
 #echo-notifications-messages {
 	float: right;
 }
+
 #echo-notifications-alerts {
 	float: right;
 }
-#pt-notifications-alert .mw-echo-unseen-notifications, #pt-notifications-message .mw-echo-unseen-notifications {
+
+#pt-notifications-alert .mw-echo-unseen-notifications,
+#pt-notifications-message .mw-echo-unseen-notifications {
 	color: #0645ad !important;
 }
 
 #echo-notifications li {
-    margin: 0 0 0 1em;
+	margin: 0 0 0 1em;
 }
 
 /* Make Echo extension more mobile friendly on small widths */
 
-@media only screen and (max-width: 450px) {
+@media only screen and ( max-width: 450px ) {
 	.oo-ui-popupWidget-popup {
 		width: auto !important;
 		position: relative !important;
 		margin-left: -260px !important;
 		font-size: 75% !important;
 	}
+
 	.oo-ui-clippableElement-clippable.oo-ui-popupWidget-body {
 		width: 100% !important;
 	}
 }
 
-/*Fix ULS CSS */
+/* Fix ULS CSS */
 
 #pt-uls a.uls-trigger {
 	padding-left: 15px !important;
@@ -1413,13 +1764,14 @@ div.mw-htmlform-field-HTMLCheckField div.mw-label {
 .orbit-container .orbit-slides-container img {
 	width: 100%;
 }
+
 .orbit-bullets {
 	margin: 0 auto 30px auto !important;
 }
 
 /* Block-Grid UL fixes */
 
-ul[class*="block-grid"] {
+ul[ class*='block-grid' ] {
 	margin: 0;
 }
 
@@ -1443,7 +1795,7 @@ ul[class*="block-grid"] {
 	background-color: #f6f6f6;
 }
 
-/* background of buttions adhere to #p-cactions*/
+/* background of buttions adhere to #p-cactions */
 
 .wikiEditor-ui-buttons {
 	background-color: #f6f6f6;
@@ -1456,11 +1808,12 @@ ul[class*="block-grid"] {
 	line-height: 1.6;
 	font-size: 0.875em;
 	position: relative;
-	margin: -1em .5em .5em 1em;
+	margin: -1em 0.5em 0.5em 1em;
 	max-height: 30px;
 	width: auto;
 	z-index: 1;
 }
+
 .mw-indicator {
 	display: inline-block;
 }
@@ -1469,12 +1822,14 @@ ul[class*="block-grid"] {
 
 #preftoc li a {
 	color: white;
-	padding: .25em .5em;
+	padding: 0.25em 0.5em;
 }
+
 #preftoc li a:hover {
 	background: aqua;
 	color: white;
 }
+
 #preftoc li {
 	margin: 2px;
 	display: inline-block;
@@ -1485,87 +1840,106 @@ ul[class*="block-grid"] {
 	list-style-image: none;
 	z-index: 3;
 	border-radius: 3px;
-	font-size: .85em;
+	font-size: 0.85em;
 	background: #142849;
 	border: 0;
 	color: white;
 }
+
 #preftoc li a {
 	color: white;
 }
+
 #preftoc li a:hover {
 	background: #2ba6cb;
 }
+
 ul#preftoc {
 	margin: auto;
 	text-align: center;
 }
-#preftoc>li.selected {
-	background: #2C58A1;
-	box-shadow: 2px 2px 5px 2px rgba(50, 138, 64, 0.54);
+
+#preftoc > li.selected {
+	background: #2c58a1;
+	box-shadow: 2px 2px 5px 2px rgba( 50, 138, 64, 0.54 );
 }
+
 #preftoc li.selected a {
 	cursor: default;
 	text-decoration: none;
 }
+
 #preferences table {
 	min-width: 100%;
 }
+
 #preftoc {
 	margin: 0;
 	padding: 0;
 	width: 100%;
 	clear: both;
 }
+
 #preftoc a:active {
 	display: block;
 	color: #000;
-	padding: 0 .7em;
+	padding: 0 0.7em;
 	position: relative;
 	text-decoration: none;
 }
+
 #preftoc li.selected a {
 	cursor: default;
 	text-decoration: none;
 }
+
 #preferences {
 	margin: 0;
 	clear: both;
-	background-color: #FFF;
+	background-color: #fff;
 	border: none;
 }
+
 .prefsection {
 	border: none;
 	padding: 0;
 	margin: 0;
 }
+
 .prefsection legend {
 	font-weight: bold;
 }
-.prefsection table, .prefsection legend {
-	background-color: #F9F9F9;
+
+.prefsection table,
+.prefsection legend {
+	background-color: #f9f9f9;
 }
+
 #preferences legend.mainLegend {
 	display: none;
 }
+
 #preferences fieldset legend {
 	font-weight: bold;
-	padding: 0 .25em;
+	padding: 0 0.25em;
 	margin: 0;
-	margin: 0 .25em 0 1em;
-	background: #FFF;
+	margin: 0 0.25em 0 1em;
+	background: #fff;
 }
+
 td.htmlform-tip {
-	font-size: .8em;
-	padding: .2em 2em;
+	font-size: 0.8em;
+	padding: 0.2em 2em;
 	color: #666;
 	border: 1px solid #eeeffe;
 	background: #eeeffe;
 }
+
 .preferences-login {
 	clear: both;
 	margin-bottom: 1.5em;
 }
+
 .prefcache {
 	font-size: 90%;
 	margin-top: 1em;
@@ -1575,71 +1949,77 @@ td.htmlform-tip {
 
 /* Images, Thumbs and Captions */
 .thumbinner {
-    border: 1px solid #c8ccd1;
-    padding: 3px;
-    background-color: #f8f9fa;
-    font-size: 94%;
-    text-align: center;
-    overflow: hidden;
-    margin: auto;
-    max-width: 100%;
+	border: 1px solid #c8ccd1;
+	padding: 3px;
+	background-color: #f8f9fa;
+	font-size: 94%;
+	text-align: center;
+	overflow: hidden;
+	margin: auto;
+	max-width: 100%;
 }
-.thumb.tright, .thumb.left {
-    max-width: 100%;
+
+.thumb.tright,
+.thumb.left {
+	max-width: 100%;
 }
+
 .thumbcaption {
-    border: 0;
-    line-height: 1.4em;
-    padding: 3px;
-    font-size: 94%;
-    text-align: left;
+	border: 0;
+	line-height: 1.4em;
+	padding: 3px;
+	font-size: 94%;
+	text-align: left;
 }
+
 .magnify a {
-    display: block;
-    text-indent: 15px;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 15px;
-    height: 11px;
+	display: block;
+	text-indent: 15px;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 15px;
+	height: 11px;
 }
+
 .mw-content-ltr .magnify a {
-    background-image: url(magnify-clip-ltr.svg);
+	background-image: url( magnify-clip-ltr.svg );
 }
 
 /* Float right and left styles - Make all MW images responsive for mobile when floated  */
 
-.floatright, .tright,
+.floatright,
+.tright,
 table.floatright {
-    margin: 0 0 .5em .5em;
-    border: 0;
+	margin: 0 0 0.5em 0.5em;
+	border: 0;
 }
 
-.floatleft,.tleft
-table.floatleft {
-    margin: 0 .5em .5em 0;
-    border: 0;
+.floatleft,
+.tleft table.floatleft {
+	margin: 0 0.5em 0.5em 0;
+	border: 0;
 }
 
 .tnone {
-    margin: .5rem 0;
-    border: 0;
+	margin: 0.5rem 0;
+	border: 0;
 }
 
 .floatnone img {
-    margin: .5rem 0;
+	margin: 0.5rem 0;
 }
 
 /* Kill the float for smaller screens and make them align center. */
 
-@media only screen and (max-width: 640px) {
-    .floatright,
-    table.floatright,
-    .floatleft,
-    table.floatleft,
-    .thumb.tleft,
-    .thumb.tright {
-        text-align: center;
-        float: none !important;
-        margin: .5em auto;
-    }
+@media only screen and ( max-width: 640px ) {
+	.floatright,
+	table.floatright,
+	.floatleft,
+	table.floatleft,
+	.thumb.tleft,
+	.thumb.tright {
+		text-align: center;
+		float: none !important;
+		margin: 0.5em auto;
+	}
 }
