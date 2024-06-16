@@ -42,7 +42,10 @@
 	},
 	"ResourceModules": {
 		"skins.foreground.styles": {
-			"position": "top",
+			"class": "MediaWiki\\ResourceLoader\\SkinModule",
+			"features": {
+				"content-media": true
+			},
 			"styles": [
 				"assets/stylesheets/normalize.css",
 				"assets/stylesheets/font-awesome.css",
