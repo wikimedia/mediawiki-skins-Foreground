@@ -129,7 +129,7 @@ class ForegroundTemplate extends BaseTemplate {
 				<li class="has-form">
 					<form action="<?php $this->text( 'wgScript' ); ?>" id="searchform" class="mw-search">
 						<div class="row collapse">
-						<div class="small-12 columns">
+						<div class="small-12 columns skin-foreground-search">
 							<?php echo $this->makeSearchInput( [ 'placeholder' => wfMessage( 'searchsuggest-search' )->text(), 'id' => 'searchInput' ] ); ?>
 							<button type="submit" class="button search"><?php echo wfMessage( 'search' )->text() ?></button>
 						</div>

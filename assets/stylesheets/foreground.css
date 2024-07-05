@@ -782,6 +782,11 @@ button,
 	vertical-align: middle;
 }
 
+.skin-foreground-search {
+	display: flex;
+	align-items: end;
+}
+
 .top-bar .button.search {
 	top: 0;
 }
