@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ajeje Brazorf"
+			"Ajeje Brazorf",
+			"GianAntonucci"
 		]
 	},
-	"foreground-menutitle": "Menu"
+	"foreground-menutitle": "Menù",
+	"foreground-menunavback": "Nn'arrè"
 }
