@@ -1,7 +1,7 @@
-$( function () {
+$( () => {
 
 	// Log errors
-	$( document ).foundation( function ( response ) {
+	$( document ).foundation( ( response ) => {
 		if ( window.console ) {
 			// eslint-disable-next-line no-console
 			console.error( response.errors );
