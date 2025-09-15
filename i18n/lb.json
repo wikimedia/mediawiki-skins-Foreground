@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"foreground-menutitle": "Menü",
-	"foreground-menunavback": "Zréck"
+	"foreground-menunavback": "Zeréck"
 }
