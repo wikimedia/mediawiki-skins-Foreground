@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Aca",
 			"Winston Sung"
 		]
 	},
-	"foreground-browsermsg": "možda neće izgledati očekivano u ovoj verziji Internet Explorer-a. Preporučujemo vam da ga nadogradite na noviju verziju, ili da pređete na pregledač poput Firefox-a ili Chrome-a",
+	"foreground-browsermsg": "možda neće izgledati očekivano u ovoj verziji Internet Explorer-a. Preporučujemo vam da ga nadogradite na noviju verziju, ili da pređete na preglednik poput Firefoxa ili Chromea",
 	"foreground-menutitle": "Meni",
 	"foreground-menunavback": "Nazad"
 }
