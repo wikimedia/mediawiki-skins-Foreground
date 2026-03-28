@@ -19,6 +19,16 @@
 					"template": "MediaWiki\\Skins\\Foreground\\ForegroundTemplate",
 					"bodyOnly": true,
 					"responsive": true,
+					"menus": [
+						"views",
+						"associated-pages",
+						"actions",
+						"variants",
+						"user-interface-preferences",
+						"notifications",
+						"user-page",
+						"user-menu"
+					],
 					"scripts": [
 						"skins.foreground.js"
 					],
@@ -30,7 +40,7 @@
 		}
 	},
 	"requires": {
-		"MediaWiki": ">= 1.40.0"
+		"MediaWiki": ">= 1.46.0"
 	},
 	"MessagesDirs": {
 		"SkinForeground": [

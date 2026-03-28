@@ -154,7 +154,15 @@ class ForegroundTemplate extends BaseTemplate {
 
 				<li id="personal-tools-dropdown" class="has-dropdown active"><a href="#"><i class="fa fa-user"></i></a>
 					<ul class="dropdown">
-						<?php foreach ( $this->getPersonalTools() as $key => $item ) {
+						<?php
+						$cNav = $this->data['content_navigation'];
+						$pTools = array_merge(
+							$cNav['user-interface-preferences'],
+							$cNav['user-page'],
+							$cNav['notifications'],
+							$cNav['user-menu'],
+						);
+						foreach ( $pTools as $key => $item ) {
 							echo $this->makeListItem( $key, $item );
 						} ?>
 					</ul>
@@ -202,7 +210,13 @@ class ForegroundTemplate extends BaseTemplate {
 						<a id="actions-button" href="#" data-dropdown="actions" data-options="align:left; is_hover: true; hover_timeout:700" class="button small secondary radius"><i class="fa fa-cog"><span class="show-for-medium-up">&nbsp;<?php echo wfMessage( 'actions' )->text() ?></span></i></a>
 						<!--RTL -->
 						<ul id="actions" class="f-dropdown" data-dropdown-content>
-							<?php foreach ( $this->data['content_actions'] as $key => $item ) {
+							<?php
+							$cactions = array_merge(
+								$cNav['views'],
+								$cNav['variants'],
+								$cNav['associated-pages'],
+							);
+							foreach ( $cactions as $key => $item ) {
 								echo preg_replace( [ '/\sprimary="1"/', '/\scontext="[a-z]+"/', '/\srel="archives"/' ], '', $this->makeListItem( $key, $item ) );
 							} ?>
 							<?php MediaWikiServices::getInstance()->getHookContainer()->run( 'SkinTemplateToolboxEnd', [ $this, true ] );  ?>
