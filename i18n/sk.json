@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"skinname-foreground": "Foreground",
+	"foreground-desc": "Téma vzhľadu zameraná na to, aby váš obsah bol v popredí",
+	"foreground-browsermsg": "nemusí v tejto verzii Internet Explorera vyzerať podľa očakávania. Odporúčame aktualizovať na novšiu verziu Internet Explorera alebo prejsť na prehliadač ako Firefox alebo Chrome.",
+	"foreground-menutitle": "Menu",
+	"foreground-menunavback": "Späť"
+}
